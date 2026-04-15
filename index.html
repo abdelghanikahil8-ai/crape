@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>موقعي</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <a href="#home">الرئيسية</a>
+        <a href="#products">المنتجات</a>
+        <a href="#contact">اتصل بنا</a>
+    </nav>
+
+    <section id="home">
+        <h2><span id="span_1">الصفحة</span> <span id="span_2">الرئيسية</span></h2>
+        <p>اهلا وسهلا بموقعنا</p>
+    </section>
+
+    <section id="products">
+        <h2>المنتجات</h2>
+        <p>منتجاتنا اللذيذة</p>
+
+        <div class="products-container">
+            <div class="product-card">
+                <span class="product-icon">🍫</span>
+                <h3>كريب شوكولا</h3>
+                <p class="product-desc">محشي شوكولا بلجيكية</p>
+                <span class="product-price">15,000 ل.س</span>
+            </div>
+
+            <div class="product-card">
+                <span class="product-icon">🍓</span>
+                <h3>كريب فريز</h3>
+                <p class="product-desc">محشي فراولة طازجة</p>
+                <span class="product-price">12,000 ل.س</span>
+            </div>
+
+            <div class="product-card">
+                <span class="product-icon">🍪</span>
+                <h3>كريب لوتس</h3>
+                <p class="product-desc">محشي بسكويت لوتس</p>
+                <span class="product-price">14,000 ل.س</span>
+            </div>
+
+            <div class="product-card">
+                <span class="product-icon">💚</span>
+                <h3>كريب فستق</h3>
+                <p class="product-desc">محشي فستق حلبي</p>
+                <span class="product-price">18,000 ل.س</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>اتصل بنا</h2>
+        <p>abd.algne8@gmail.com</p>
+
+        <!-- ✨ نموذج الاتصال المضاف -->
+        <div class="contact-form">
+            <h3>أرسل لنا رسالة</h3>
+
+            <form action="#" method="post">
+
+                <div class="form-group">
+                    <label for="name">الاسم الكامل:</label>
+                    <input type="text" id="name" name="name" placeholder="أدخل اسمك الكامل" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">البريد الإلكتروني:</label>
+                    <input type="email" id="email" name="email" placeholder="example@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">العمر:</label>
+                    <input type="number" id="age" name="age" min="1" max="100" placeholder="أدخل عمرك">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">رسالتك:</label>
+                    <textarea id="message" name="message" rows="4" placeholder="اكتب رسالتك هنا..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">إرسال الرسالة 📤</button>
+
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>© جامعة الشهباء الخاصة</p>
+    </footer>
+
+</body>
+
+</html>

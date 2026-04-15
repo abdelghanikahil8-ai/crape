@@ -1,0 +1,389 @@
+/* الألوان: #223d4d و #fd802e */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    padding-bottom: 60px;
+}
+
+nav {
+    background: #223d4d;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background: #fd802e;
+    transform: translateY(-3px);
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    scroll-margin-top: 75px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* --- قسم الرئيسية --- */
+#home {
+    background-image: url('https://images.pexels.com/photos/35046939/pexels-photo-35046939.jpeg');
+    color: white;
+    position: relative;
+    animation: slideFromRight 1s ease;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(34, 61, 77, 0.5);
+}
+
+#home h2,
+#home p {
+    position: relative;
+    z-index: 1;
+}
+
+/* --- قسم المنتجات --- */
+#products {
+    background-image: url('https://images.pexels.com/photos/15874513/pexels-photo-15874513.jpeg');
+    color: white;
+    position: relative;
+    animation: slideFromRight 1s ease;
+}
+
+#products::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(34, 61, 77, 0.7);
+}
+
+#products h2,
+#products>p {
+    position: relative;
+    z-index: 1;
+}
+
+.products-container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 40px;
+    max-width: 1100px;
+}
+
+.product-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px 20px;
+    border-radius: 15px;
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    border-top: 4px solid #fd802e;
+    backdrop-filter: blur(5px);
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(253, 128, 46, 0.4);
+    background: rgba(255, 255, 255, 1);
+}
+
+.product-icon {
+    font-size: 3.5em;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    color: #223d4d;
+    font-size: 1.5em;
+    margin-bottom: 8px;
+    border-bottom: 2px solid #fd802e;
+    padding-bottom: 8px;
+}
+
+.product-desc {
+    color: #555;
+    font-size: 0.95em;
+    margin: 10px 0;
+    animation: none;
+}
+
+.product-price {
+    display: inline-block;
+    background: #fd802e;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-top: 10px;
+    animation: none;
+}
+
+/* --- قسم اتصل بنا --- */
+#contact {
+    background: linear-gradient(135deg, #223d4d, #1a5c7e, #fd802e);
+    color: white;
+    position: relative;
+    animation: slideFromRight 1s ease;
+    padding: 80px 20px;
+}
+
+/* ✨ تنسيق نموذج الاتصال */
+.contact-form {
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 30px 40px;
+    border-radius: 20px;
+    max-width: 500px;
+    width: 100%;
+    margin-top: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(253, 128, 46, 0.3);
+}
+
+.contact-form h3 {
+    color: white;
+    font-size: 1.8em;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #fd802e;
+    padding-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    font-size: 1em;
+    font-family: 'Segoe UI', sans-serif;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #fd802e;
+    background: white;
+    box-shadow: 0 0 10px rgba(253, 128, 46, 0.5);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #888;
+}
+
+.submit-btn {
+    background: #fd802e;
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+    box-shadow: 0 5px 15px rgba(253, 128, 46, 0.3);
+}
+
+.submit-btn:hover {
+    background: #e06d1a;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(253, 128, 46, 0.5);
+}
+
+/* --- العناوين والنصوص --- */
+h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #fd802e;
+    padding-bottom: 10px;
+    animation: slideDown 0.8s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+p {
+    font-size: 1.5em;
+    animation: slideUp 0.8s ease 0.2s both;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    transition: transform 0.5s ease;
+}
+
+section:hover {
+    transform: scale(1.01);
+}
+
+/* --- الفوتر --- */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #223d4d;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    animation: pulse 2s infinite;
+    z-index: 100;
+}
+
+@keyframes pulse {
+    0% {
+        background: #223d4d;
+    }
+
+    50% {
+        background: #2a5a7a;
+    }
+
+    100% {
+        background: #223d4d;
+    }
+}
+
+#span_1 {
+    color: #fd802e;
+}
+
+#span_2 {
+    color: white;
+}
+
+/* --- تحسينات للجوال --- */
+@media (max-width: 768px) {
+    .products-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-card {
+        width: 280px;
+    }
+
+    h2 {
+        font-size: 2.2em;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+
+    section {
+        background-attachment: scroll;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+}
