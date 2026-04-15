@@ -1,5 +1,3 @@
-/* الألوان: #223d4d و #fd802e */
-
 * {
     margin: 0;
     padding: 0;
@@ -78,7 +76,7 @@ section {
     }
 }
 
-/* --- قسم الرئيسية --- */
+
 #home {
     background-image: url('https://images.pexels.com/photos/35046939/pexels-photo-35046939.jpeg');
     color: white;
@@ -102,7 +100,7 @@ section {
     z-index: 1;
 }
 
-/* --- قسم المنتجات --- */
+
 #products {
     background-image: url('https://images.pexels.com/photos/15874513/pexels-photo-15874513.jpeg');
     color: white;
@@ -188,7 +186,7 @@ section {
     animation: none;
 }
 
-/* --- قسم اتصل بنا --- */
+
 #contact {
     background: linear-gradient(135deg, #223d4d, #1a5c7e, #fd802e);
     color: white;
@@ -197,7 +195,7 @@ section {
     padding: 80px 20px;
 }
 
-/* ✨ تنسيق نموذج الاتصال */
+
 .contact-form {
     position: relative;
     z-index: 1;
@@ -279,7 +277,7 @@ section {
     box-shadow: 0 8px 20px rgba(253, 128, 46, 0.5);
 }
 
-/* --- العناوين والنصوص --- */
+
 h2 {
     font-size: 3em;
     margin-bottom: 20px;
@@ -325,7 +323,7 @@ section:hover {
     transform: scale(1.01);
 }
 
-/* --- الفوتر --- */
+
 footer {
     position: fixed;
     bottom: 0;
@@ -360,7 +358,7 @@ footer {
     color: white;
 }
 
-/* --- تحسينات للجوال --- */
+
 @media (max-width: 768px) {
     .products-container {
         flex-direction: column;
